@@ -4,12 +4,19 @@ package com.github.nkolytschew.cloudsummerschool.mvc.web;
 import org.springframework.web.bind.annotation.*;
 
 
+/**
+ * {@link RestController} combines {@link org.springframework.stereotype.Controller} annotation and {@link ResponseBody} anotation
+ */
 //@Controller
 @RestController
 public class HelloWorldController {
 
     int counter = 0;
 
+    /**
+     * instead of {@link RequestMapping} you can use {@link GetMapping}
+     * use {@link ResponseBody} if you have {@link org.springframework.stereotype.Controller} annotation and want to return an object instead of a view
+     */
     @RequestMapping("/")
     // @GetMapping("/")
     // @ResponseBody
